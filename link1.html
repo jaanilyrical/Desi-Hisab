@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kg to rupee nd gram </title>
+    <!--link external css-->
+    <link rel="stylesheet" href="link1.css">
+    <!-- font link start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tiro+Devanagari+Hindi:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&display=swap" rel="stylesheet">
+    <!-- font link end -->
+</head>
+
+<body>
+    <h2 class="center">दाम का वजन निकाले</h2>
+    <hr>
+    <div class="flex">
+        <div>
+            <p>1.जो लिखा है वो डिलीट मत करना.
+            </p>
+            <p> 2.एक किलोग्राम का दाम लिखो.
+            </p>
+            <p>3.OK का बटन दबाओ.
+            </p>
+            <p>4.जितने रूपये का सामान लेना वो लिखो.
+            </p>
+            <p>5.बराबर ( = ) का बटन दबाओ.</p>
+            <p>6.जो संख्या दिख रही है वो समान का वजन है ग्राम में.</p>
+            <p>7.दुबारा शुरू करने के लिए AC बटन को दबाओ.</p>
+        </div>
+        <div class="container">
+            <div class="calculator">
+                <p class="output"></p>
+                <form>
+                    <div class="display">
+                        <input type="text" name="display" value="1000/">
+
+                    </div>
+                    <div>
+                        <input class="AC" type="button" value="AC" onclick="display.value = '1000/'"
+                            onmousedown="soundAC.play()">
+                        <input class="DE" type="button" value="DE"
+                            onclick="display.value = display.value.toString().slice(0,-1) "
+                            onmousedown="soundDE.play()">
+                        <input type="button" value="." onclick="display.value += '.'" onmousedown="soundBtn.play()">
+                    </div>
+                    <div>
+                        <input type="button" value="7" onclick="display.value += '7'" onmousedown="soundBtn.play()">
+                        <input type="button" value="8" onclick="display.value += '8'" onmousedown="soundBtn.play()">
+                        <input type="button" value="9" onclick="display.value += '9'" onmousedown="soundBtn.play()">
+                    </div>
+                    <div>
+                        <input type="button" value="4" onclick="display.value += '4'" onmousedown="soundBtn.play()">
+                        <input type="button" value="5" onclick="display.value += '5'" onmousedown="soundBtn.play()">
+                        <input type="button" value="6" onclick="display.value += '6'" onmousedown="soundBtn.play()">
+                    </div>
+                    <div>
+                        <input type="button" value="1" onclick="display.value += '1'" onmousedown="soundBtn.play()">
+                        <input type="button" value="2" onclick="display.value += '2'" onmousedown="soundBtn.play()">
+                        <input type="button" value="3" onclick="display.value += '3'" onmousedown="soundBtn.play()">
+                    </div>
+                    <div>
+                        <input class="OK" type="button" value="OK" onclick="display.value += '*'"
+                            onmousedown="soundOK.play()">
+                        <input class="done" type="button" value="=" class="equal"
+                            onclick="display.value = eval(display.value)" onmousedown="soundDone.play()">
+                        <input type="button" value="0" onclick="display.value += '0'" onmousedown="soundBtn.play()">
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="link1.js"></script>
+</body>
+
+</html>
